@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//    function outer(){
+//             let message="hello";
+//             function inner(){
+//                 console.log(message);
+//             }
+//             inner();
+//             console.log(message);
+//         }
+//         outer(); 
+    //   function init(){
+    //     let name="pranali";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //      return displayName();
+    //   }
+    //   const myFunc=init();
+    //   myFunc();
+    function clickHandler(color){
+      return  function(){
+        document.body.style.backgroundColor=color;
+      }
+    }
+    window.onload=function(){
+    document.getElementById('orange').onclick=clickHandler("orange");
+    document.getElementById('green').onclick=clickHandler("green");
+    }
+    </script>
+</head>
+<body>
+ <button id="orange">
+    orange
+ </button>
+ <button id="green">
+    green
+ </button>
+</body>
+</html>
